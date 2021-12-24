@@ -1,0 +1,32 @@
+.section-title a{
+    color: #37517e;
+    text-decoration: underline #37517e;
+}
+
+.card-title h2{
+    font-size: xx-large;
+    color: rgb(87, 123, 207);
+    margin-bottom: 0 !important;
+    padding-right: 0px !important;
+    margin-right: 80% !important;
+    padding-bottom: 0.4% !important;
+    padding-top: 0.4% !important;
+    background-color: rgba(193, 206, 230, 0.4);
+}
+
+.card-title{
+    margin-bottom: 0;
+}
+
+.card-title p a{
+    color: #37517e;
+}
+
+div p b{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+div p, ul{
+    font-size: x-large;
+}
