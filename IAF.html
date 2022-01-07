@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Identification and Authentication Failures</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Identification and Authentication Failures</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/-s23eCVtVhI"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>Overview</h3>
+        <h4>What is authentication identification?</h4>
+        <p>Identification is the ability to identify uniquely a user of a system or an application that is running in
+          the system. Authentication is the ability to prove that a user or application is genuinely who that person or
+          what that application claims to be. <br><br>
+          The risk of broken authentication is not restricted to a set attack pattern or specific application
+          vulnerability. An application becomes vulnerable when adequate user authentication controls are improperly
+          implemented or overlooked altogether, increasing the risk of user accounts being breached. OWASP outlines the
+          three primary attack patterns that exploit weak authentication:
+        <ul>
+          <li> credential stuffing</li>
+          <li> brute force access</li>
+          <li> session hijacking</li>
+        </ul>
+        </p>
+
+        <h3>Description</h3>
+        <p>Confirmation of the user's identity, authentication, and session management is critical to protect against
+          authentication-related attacks. There may be authentication weaknesses if the application:
+        <ul>
+          <li> Permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames
+            and passwords.</li>
+          <li> Permits brute force or other automated attacks.</li>
+          <li> Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin".</li>
+          <li> Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based
+            answers," which cannot be made safe.</li>
+          <li> Uses plain text, encrypted, or weakly hashed passwords data stores (see **A02:2021-Cryptographic
+            Failures**).</li>
+          <li> Has missing or ineffective multi-factor authentication.</li>
+          <li> Exposes session identifier in the URL.</li>
+          <li> Reuse session identifier after successful login.</li>
+          <li> Does not correctly invalidate Session IDs. User sessions or authentication tokens (mainly single sign-on
+            (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.</li>
+        </ul>
+        </p>
+
+        <h3>How to prevent?</h3>
+        <ul>
+          <li> Where possible, implement multi-factor authentication to prevent automated credential stuffing, brute
+            force, and stolen credential reuse attacks.</li>
+          <li> Do not ship or deploy with any default credentials, particularly for admin users.</li>
+          <li> Implement weak password checks, such as testing new or changed passwords against the top 10,000 worst
+            passwords list.</li>
+          <li> Align password length, complexity, and rotation policies with National Institute of Standards and
+            Technology (NIST) 800-63b's guidelines in section 5.1.1 for Memorized Secrets or other modern,
+            evidence-based password policies.</li>
+          <li> Ensure registration, credential recovery, and API pathways are hardened against account enumeration
+            attacks by using the same messages for all outcomes.</li>
+          <li> Limit or increasingly delay failed login attempts, but be careful not to create a denial of service
+            scenario. Log all failures and alert administrators when credential stuffing, brute force, or other attacks
+            are detected.</li>
+          <li> Use a server-side, secure, built-in session manager that generates a new random session ID with high
+            entropy after login. Session identifier should not be in the URL, be securely stored, and invalidated after
+            logout, idle, and absolute timeouts.</li>
+        </ul>
+        </p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p><b style="font-size: x-large;"> Scenario:</b> Credential stuffing, the use of lists of known passwords, is a common attack. Suppose an application does not implement automated threat or credential stuffing protection. In that case, the application can be used as a password oracle to determine if the credentials are valid.
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

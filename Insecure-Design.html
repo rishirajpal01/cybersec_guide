@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Insecure Design</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Insecure Design</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/aH6NjURbK2w"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>Overview</h3>
+        <p>The Insecure design category maps 40 CWEs that are related to input valuation errors, proper usage of
+          application APIs and functions, privilege management issues and IDOR vulnerabilities, security of
+          communication with the application, secure storage of sensitive information. <br><br>
+          This new OWASP category anticipates broad negotiations with business and implementation of threat modeling
+          stage in order to anticipate attack vectors and properly protect the web application.</p>
+
+        <h3>Description</h3>
+        <p>Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective
+          control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference
+          between insecure design and insecure implementation. We differentiate between design flaws and implementation
+          defects for a reason, they have different root causes and remediation. A secure design can still have
+          implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by
+          a perfect implementation as by definition, needed security controls were never created to defend against
+          specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling
+          inherent in the software or system being developed, and thus the failure to determine what level of security
+          design is required.</p>
+
+        <h3>Requirements and Resource Management</h3>
+        <p>Collect and negotiate the business requirements for an application with the business, including the
+          protection requirements concerning confidentiality, integrity, availability, and authenticity of all data
+          assets and the expected business logic. Take into account how exposed your application will be and if you need
+          segregation of tenants (additionally to access control). Compile the technical requirements, including
+          functional and non-functional security requirements. Plan and negotiate the budget covering all design, build,
+          testing, and operation, including security activities.</p>
+
+        <h3>Secure Design</h3>
+        <p>Secure design is a culture and methodology that constantly evaluates threats and ensures that code is
+          robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into
+          refinement sessions (or similar activities); look for changes in data flows and access control or other
+          security controls. In the user story development determine the correct flow and failure states, ensure they
+          are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions
+          for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the
+          assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user
+          story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an
+          add-on nor a tool that you can add to software.</p>
+
+        <h3>Secure Development Lifecycle</h3>
+        <p>Secure software requires a secure development lifecycle, some form of secure design pattern, paved road
+          methodology, secured component library, tooling, and threat modeling. Reach out for your security specialists
+          at the beginning of a software project throughout the whole project and maintenance of your software. Consider
+          leveraging the OWASP Software Assurance Maturity Model (SAMM) to help structure your secure software
+          development efforts.</p>
+
+        <h3>How to prevent?</h3>
+        <p>
+        <ul>
+            <li> Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls </li>
+            <li> Establish and use a library of secure design patterns or paved road ready to use components</li>
+            <li> Use threat modeling for critical authentication, access control, business logic, and key flows</li>
+            <li> Integrate security language and controls into user stories</li>
+            <li> Integrate plausibility checks at each tier of your application (from frontend to backend)</li>
+            <li> Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile </li>use-cases *and* misuse-cases for each tier of your application.
+            <li> Segregate tier layers on the system and network layers depending on the exposure and protection needs</li>
+            <li> Segregate tenants robustly by design throughout all tiers</li>
+            <li> Limit resource consumption by user or service</li>
+        </ul>
+        </p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p><b style="font-size: x-large;"> Scenario:</b> A credential recovery workflow might include “questions and answers,” which is prohibited by NIST 800-63b, the OWASP ASVS, and the OWASP Top 10. Questions and answers cannot be trusted as evidence of identity as more than one person can know the answers, which is why they are prohibited. Such code should be removed and replaced with a more secure design.
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

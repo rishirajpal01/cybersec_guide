@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Broken Access Control</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Broken Access Control</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/P38at6Tp8Ms"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>What is access control?</h3>
+        <p>Access control (or authorization) is the application of constraints on who (or what) can perform attempted
+          actions or access resources that they have requested. In the context of web applications, access control is
+          dependent on authentication and session management:
+        <ul>
+          <p class="pt-2"></p>
+          <li><b>Authentication: </b>identifies the user and confirms that they are who they say they are.</li>
+          <p class="pt-1"></p>
+          <li><b>Session management: </b>identifies which subsequent HTTP requests are being made by that same user.
+          </li>
+          <p class="pt-1"></p>
+          <li><b>Access control: </b>determines whether the user is allowed to carry out the action that they are
+            attempting to perform.</li>
+        </ul>
+        </p>
+        <p>Broken access controls are a commonly encountered and often critical security vulnerability. Design and
+          management of access controls is a complex and dynamic problem that applies business, organizational, and
+          legal constraints to a technical implementation. Access control design decisions have to be made by humans,
+          not technology, and the potential for errors is high.
+          <img src="/assets/img/Volnerversity/BAC.png" alt="">
+        </p>
+        <h3 class="pt-3">Description</h3>
+        <p>Access control enforces policy such that users cannot act outside of their intended permissions. Failures
+          typically lead to unauthorized information disclosure, modification, or destruction of all data or performing
+          a business function outside the user's limits. Common access control vulnerabilities include:
+        <ul>
+          <li>Violation of the principle of least privilege or deny by default, where access should only be granted for
+            particular capabilities, roles, or users, but is available to anyone.</li>
+          <li>Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal
+            application state, or the HTML page, or by using an attack tool modifying API requests.</li>
+          <li>Permitting viewing or editing someone else's account, by providing its unique identifier (insecure direct
+            object references)</li>
+          <li>Accessing API with missing access controls for POST, PUT and DELETE.</li>
+          <li>Elevation of privilege. Acting as a user without being logged in or acting as an admin when logged in as a
+            user.</li>
+          <li>Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token, or
+            a cookie or hidden field manipulated to elevate privileges or abusing JWT invalidation.</li>
+          <li>CORS misconfiguration allows API access from unauthorized/untrusted origins.</li>
+          <li>Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard
+            user.</li>
+        </ul>
+        </p>
+
+        <h3>How to prevent?</h3>
+        <p>Access control is only effective in trusted server-side code or server-less API, where the attacker cannot
+          modify the access control check or metadata.
+        <ul>
+          <li>Except for public resources, deny by default.</li>
+          <li>Implement access control mechanisms once and re-use them throughout the application, including minimizing
+            Cross-Origin Resource Sharing (CORS) usage.</li>
+          <li>Model access controls should enforce record ownership rather than accepting that the user can create,
+            read, update, or delete any record.</li>
+          <li>Unique application business limit requirements should be enforced by domain models.</li>
+          <li>Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not
+            present within web roots.</li>
+          <li>Log access control failures, alert admins when appropriate (e.g., repeated failures).</li>
+          <li>Rate limit API and controller access to minimize the harm from automated attack tooling.</li>
+          <li>Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should
+            rather be short-lived so that the window of opportunity for an attacker is minimized. For longer lived JWTs
+            it's highy recommended to follow the OAuth standards to revoke access.</li>
+        </ul>
+        </p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p><b style="font-size: x-large;"> Scenario:</b> The application uses unverified data in a SQL call that is accessing account information: <br><br>
+          <em>pstmt.setString(1, request.getParameter("acct"));<br>
+          ResultSet results = pstmt.executeQuery( );</em><br><br>
+          An attacker simply modifies the browser's 'acct' parameter to send whatever account number they want. If not correctly verified, the attacker can access any user's account. <br><br>
+          <em>https://example.com/app/accountInfo?acct=notmyacct</em>
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

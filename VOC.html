@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Vulnerable and Outdated Component</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Vulnerable and Outdated Component</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/IGsNYVDKRV0"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>Overview</h3>
+        <p>The prevalence of vulnerable and outdated components — and the ease of attacks using this vector — make this
+          an especially dangerous category. Almost all modern applications use open-source packages, and information
+          about vulnerabilities related to these packages is widely available. Attackers who figure out what vulnerable
+          packages you're using can use exploits that are already available. That means you have a type of attack that
+          is widespread and straightforward. <br><br>
+          But while upgrading and managing vulnerable and outdated components might seem simple in theory, many
+          organizations find that, in practice, the task is anything but easy.
+        </p>
+
+        <h3>Description</h3>
+        <p>You are likely vulnerable:
+        <ul>
+          <li> If you do not know the versions of all components you use (both client-side and server-side). This
+            includes components you directly use as well as nested dependencies.</li>
+          <li> If the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server,
+            database management system (DBMS), applications, APIs and all components, runtime environments, and
+            libraries.</li>
+          <li> If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the
+            components you use.</li>
+          <li> If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based,
+            timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under
+            change control, leaving organizations open to days or months of unnecessary exposure to fixed
+            vulnerabilities.</li>
+          <li> If software developers do not test the compatibility of updated, upgraded, or patched libraries.</li>
+          <li> If you do not secure the components’ configurations (see A05:2021-Security Misconfiguration).</li>
+        </ul>
+        </p>
+
+        <h3>How to prevent?</h3>
+        <p>There should be a patch management process in place to:
+        <ul>
+          <li> Remove unused dependencies, unnecessary features, components, files, and documentation.</li>
+          <li> Continuously inventory the versions of both client-side and server-side components (e.g., frameworks,
+            libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc.
+            Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability
+            Database (NVD) for vulnerabilities in the components. Use software composition analysis tools to automate
+            the process. Subscribe to email alerts for security vulnerabilities related to components you use.</li>
+          <li> Only obtain components from official sources over secure links. Prefer signed packages to reduce the
+            chance of including a modified, malicious component (See A08:2021-Software and Data Integrity Failures).
+          </li>
+          <li> Monitor for libraries and components that are unmaintained or do not create security patches for older
+            versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect
+            against the discovered issue.</li>
+        </ul>
+        </p>
+        <p>Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or
+          configuration changes for the lifetime of the application or portfolio.</p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p><b style="font-size: x-large;"> Scenario:</b> Components typically run with the same privileges as the
+          application itself, so flaws in any component can result in serious impact. Such flaws can be accidental
+          (e.g., coding error) or intentional (e.g., a backdoor in a component). Some example exploitable component
+          vulnerabilities discovered are:
+        <ul>
+          <li>CVE-2017-5638, a Struts 2 remote code execution vulnerability that enables the execution of arbitrary code
+            on the server, has been blamed for significant breaches.</li>
+          <li>While the internet of things (IoT) is frequently difficult or impossible to patch, the importance of
+            patching them can be great (e.g., biomedical devices)</li>
+        </ul>
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

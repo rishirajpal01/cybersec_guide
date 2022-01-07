@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Security Misconfiguration</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Security Misconfiguration</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/JuGSUMtKTPU"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>Overview</h3>
+        <p>Security Misconfiguration is simply defined as failing to implement all the security controls for a server or
+          web application, or implementing the security controls, but doing so with errors. What a company thought of as
+          a safe environment actually has dangerous gaps or mistakes that leave the organization open to risk. </p>
+
+        <h3>Description</h3>
+        <p>The application might be vulnerable if the application is:
+        <ul>
+          <li> Missing appropriate security hardening across any part of the application stack or improperly configured
+            permissions on cloud services.</li>
+          <li> Unnecessary features are enabled or installed (e.g., unnecessary ports, services, pages, accounts, or
+            privileges).</li>
+          <li> Default accounts and their passwords are still enabled and unchanged.</li>
+          <li> Error handling reveals stack traces or other overly informative error messages to users.</li>
+          <li> For upgraded systems, the latest security features are disabled or not configured securely.</li>
+          <li> The security settings in the application servers, application frameworks (e.g., Struts, Spring, ASP.NET),
+            libraries, databases, etc., are not set to secure values.</li>
+          <li> The server does not send security headers or directives, or they are not set to secure values.</li>
+          <li> The software is out of date or vulnerable (see A06:2021-Vulnerable and Outdated Components).</li>
+        </ul>
+        </p>
+        <p>Without a concerted, repeatable application security configuration process, systems are at a higher risk.</p>
+
+        <h3>How to prevent?</h3>
+        <p>Secure installation processes should be implemented, including:
+        <ul>
+          <li> A repeatable hardening process makes it fast and easy to deploy another environment that is appropriately
+            locked down. Development, QA, and production environments should all be configured identically, with
+            different credentials used in each environment. This process should be automated to minimize the effort
+            required to set up a new secure environment.</li>
+          <li> A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do
+            not install unused features and frameworks.</li>
+          <li> A task to review and update the configurations appropriate to all security notes, updates, and patches as
+            part of the patch management process (see A06:2021-Vulnerable and Outdated Components). Review cloud storage
+            permissions (e.g., S3 bucket permissions).</li>
+          <li> A segmented application architecture provides effective and secure separation between components or
+            tenants, with segmentation, containerization, or cloud security groups (ACLs).</li>
+          <li> Sending security directives to clients, e.g., Security Headers.</li>
+          <li> An automated process to verify the effectiveness of the configurations and settings in all environments.
+          </li>
+        </ul>
+        </p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p><b style="font-size: x-large;"> Scenario:</b> The application server comes with sample applications not
+          removed from the production server. These sample applications have known security flaws attackers use to
+          compromise the server. Suppose one of these applications is the admin console, and default accounts weren't
+          changed. In that case, the attacker logs in with default passwords and takes over.
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

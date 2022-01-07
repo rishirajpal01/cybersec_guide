@@ -8,7 +8,7 @@
     color: rgb(87, 123, 207);
     margin-bottom: 0 !important;
     padding-right: 0px !important;
-    margin-right: 80% !important;
+    margin-right: 14em !important;  
     padding-bottom: 0.4% !important;
     padding-top: 0.4% !important;
     background-color: rgba(193, 206, 230, 0.4);
@@ -29,4 +29,8 @@ div p b{
 
 div p, ul{
     font-size: x-large;
+}
+
+h3{
+    font-size: xx-large;
 }

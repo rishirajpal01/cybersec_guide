@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>SSRF</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/certstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">Cyber Guide</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>
+            <a class="getstarted scrollto" href="inner-page.html">Get Started</a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Cert Info ======= -->
+  <section id="faq" class="faq section-bg mt-4">
+    <p class="mt-4"></p>
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Server-Side Request Forgery (SSRF)</h2>
+      </div>
+
+      <div class="row mt-3">
+        <div data-aos="fade-up" class="card-title py-3">
+          <h2 data-aos="fade-right"><span class="border border-primary"></span>Video Guide</h2>
+        </div>
+        <iframe class="col-lg-8 mt-0 pt-0" height="480" src="https://www.youtube.com/embed/_IVjvNelzMw"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <p class="mb-4"></p>
+      </div>
+
+      <div data-aos="fade-up" class="card-title py-3 mt-2">
+        <h2 data-aos="fade-right"><span class="border border-primary"></span>Learn</h2>
+        <p class="pt-4"></p>
+        <h3>Overview</h3>
+        <p>Server-side request forgery (also known as SSRF) is a web security vulnerability that allows an attacker to
+          induce the server-side application to make HTTP requests to an arbitrary domain of the attacker's choosing..
+          <br><br>
+          In a typical SSRF attack, the attacker might cause the server to make a connection to internal-only services
+          within the organization's infrastructure. In other cases, they may be able to force the server to connect to
+          arbitrary external systems, potentially leaking sensitive data such as authorization credentials.
+        </p>
+
+        <h3>Description</h3>
+        <p>SSRF flaws occur whenever a web application is fetching a remote resource without validating the
+          user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected
+          destination, even when protected by a firewall, VPN, or another type of network access control list (ACL).
+          <br><br>
+          As modern web applications provide end-users with convenient features, fetching a URL becomes a common
+          scenario. As a result, the incidence of SSRF is increasing. Also, the severity of SSRF is becoming higher due
+          to cloud services and the complexity of architectures.
+        </p>
+        <p>You are vulnerable to information leakage by making logging and alerting events visible to a user or an
+          attacker (see <a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">[A01:2021-Broken Access
+            Control]</a> ).</p>
+
+        <h3>How to prevent?</h3>
+        <p>Developers can prevent SSRF by implementing some or all the following defense in depth controls:
+        </p>
+
+        <h4>From Network layer</h4>
+        <p>
+        <ul>
+          <li> Segment remote resource access functionality in separate networks to reduce the impact of SSRF</li>
+          <li> Enforce “deny by default” firewall policies or network access control rules to block all but essential
+            intranet traffic.*Hints:*~ Establish an ownership and a lifecycle for firewall rules based on applications.~
+            Log all accepted *and* blocked network flows on firewalls (see <a
+              href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/">[A09:2021-Security
+              Logging and Monitoring
+              Failures]</a>).</li>
+        </ul>
+        </p>
+
+        <h4>From Application layer:</h4>
+        <p>
+        <ul>
+          <li> Sanitize and validate all client-supplied input data</li>
+          <li> Enforce the URL schema, port, and destination with a positive allow list</li>
+          <li> Do not send raw responses to clients</li>
+          <li> Disable HTTP redirections</li>
+          <li> Be aware of the URL consistency to avoid attacks such as DNS rebinding and “time of check, time of use”
+            (TOCTOU) race conditions</li>
+        </ul>
+        </p>
+        <p>Do not mitigate SSRF via the use of a deny list or regular expression. Attackers have payload lists, tools,
+          and skills to bypass deny lists.</p>
+
+        <h4>Additional Measures to consider:</h4>
+        <p>
+        <ul>
+          <li> Don't deploy other security relevant services on front systems (e.g. OpenID). Control local traffic on
+            these systems (e.g. localhost)</li>
+          <li> For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs) on independent
+            systems to consider very high protection needs</li>
+        </ul>
+        </p>
+
+        <h3>Example Attack Scenarios</h3>
+        <p>Attackers can use SSRF to attack systems protected behind web application firewalls, firewalls, or network
+          ACLs, using scenarios such as:<br><br><b style="font-size: x-large;"> Scenario:</b> Sensitive data exposure –
+          Attackers can access local files such as or internal services to gain sensitive information such as
+          <em> file:///etc/passwd &lt;/span&gt; and http://localhost:28017/.</em>
+        </p>
+      </div>
+
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Project Exhibition 2 Webpage</h3>
+            <p>
+              VIT Bhopal <br />
+              Kothri Kalan, MP 452001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 1234 5678 90<br />
+              <strong>Email:</strong> info@example.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>VIT Bhopal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Project by VIT Students</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
